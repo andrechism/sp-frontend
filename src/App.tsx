@@ -4,7 +4,6 @@ import AppThemeProvider from "./global/styles/AppThemeProvider";
 import GlobalStyle from "./global/styles/GlobalStyles";
 import DefaultLayout from "./layout/DefaultLayout";
 import HomePage from "./pages";
-import PageNotFound from "./pages/404";
 import UserPage from "./pages/user";
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/user/:username" element={<UserPage />} />
-              <Route path="*" element={<PageNotFound />} />
             </Routes>
           </DefaultLayout>
         </HashRouter>
