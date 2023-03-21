@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { GithubProvider } from "./contexts/GithubProvider";
 import AppThemeProvider from "./global/styles/AppThemeProvider";
 import GlobalStyle from "./global/styles/GlobalStyles";
@@ -12,7 +12,7 @@ function App() {
     <AppThemeProvider>
       <GlobalStyle />
       <GithubProvider>
-        <BrowserRouter>
+        <HashRouter>
           <DefaultLayout>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -20,7 +20,7 @@ function App() {
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </DefaultLayout>
-        </BrowserRouter>
+        </HashRouter>
       </GithubProvider>
     </AppThemeProvider>
   );
